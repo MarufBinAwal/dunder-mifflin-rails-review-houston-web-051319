@@ -1,0 +1,7 @@
+<h1>Dog</h1>
+<% @dogs.each do |dog| %>
+<div class="well">
+    <h3><%= dog.name%></h3> 
+    <%= link_to dog.name, dog_path(dog), :class => 'btn btn-default' %> 
+</div>
+<% end %>

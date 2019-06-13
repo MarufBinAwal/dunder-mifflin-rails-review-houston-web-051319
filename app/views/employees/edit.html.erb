@@ -1,0 +1,30 @@
+<h1>Edit Employee</h1>
+
+<%=form_for @employee, url: employees_path do |f| %>
+        
+<div>
+        <%= f.label "Dog" %>
+        <%= f.collection_select :dog_id, Dog.all, :id, :name %>
+</div>
+
+<p>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %><br>
+
+        <%= f.label :last_name %> 
+        <%= f.text_field :last_name %><br>
+
+        <%= f.label :alias %> 
+        <%= f.text_field :alias %><br>
+
+        <%= f.label :office %> 
+        <%= f.text_field :office %><br>
+</p>
+
+
+<p>
+    <%= f.submit%><br>
+    
+</p>
+        
+<% end %>

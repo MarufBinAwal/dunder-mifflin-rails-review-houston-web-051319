@@ -1,0 +1,6 @@
+<% @employees.each do |employee| %>
+<div class="well">
+    <h3><%= employee.first_name %></h3>
+    <%= link_to employee.first_name, employee_path(employee), :class => 'btn btn-default' %>
+</div>
+<% end %>
